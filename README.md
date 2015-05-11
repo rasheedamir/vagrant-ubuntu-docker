@@ -107,3 +107,8 @@ bundle install --path vendor
 chmod 700 vagrant_insecure.key
 bundle exec rake virtualbox:ubuntu-14.04-amd64:all
 ```
+
+# Upload box
+
+https://atlas.hashicorp.com/help/guides/vagrant-box-create-and-distribute
+https://atlas.hashicorp.com/rasheed/boxes/open-ubuntu-14.04-amd64-docker
