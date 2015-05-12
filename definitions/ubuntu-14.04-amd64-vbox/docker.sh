@@ -9,5 +9,7 @@ apt-get -y update
 # Install docker
 apt-get -y install lxc-docker
 
+usermod -a -G docker vagrant
+
 sed -i "s~^.*/usr/bin/docker -d~  /usr/bin/docker -d -r -H 'unix:///var/run/docker.sock' -H 'tcp://0.0.0.0:4243' -api-enable-cors~" /etc/init/docker.conf
 service docker restart
